@@ -1,0 +1,14 @@
+1--CTLE Tutoring Forum
+  Description: A Website with a collection of forum pages by which students can ask and answer problems that would arise in class or tutoring environments. This application would be a basic forum implementation but could also feature various user interfaces for certain contexts, such as using API's for  mathematical notation or implementing a certain Web application for dharing code.
+  Benefits: Relational database usage, UI development, widely applicable in the university
+  Issues: Source of cheating or collusion, aggravation for professors, difficult to integrate with existing university Web pages
+
+2--Math Wizard
+  Description: An Website with an aggregation of problems and problem generators designed to aid students in working through common problems in mathematics course. This would focus more on showcasing problems with detailed solutions in order to help students complete their work while learning effectively. In addition, it would include problem generators for many common types of problems that students could use to display various steps in a problem.
+  Benefits: UX development, useful for many students, possible RDBMS applications, may involve mathematics API's
+  Issues: Heavy on UX, possible source of cheating, hard to combine various mathematics applications effectively
+
+3--Web Application Converters
+  Description: A number of compiler-like programs that convert between various Web languages and frameworks. For example, we may want to remove all inline styling from a Web page automatically, move DOM creation from JS to HTML, or revert from jQuery code to pure JS.
+  Benefits: Potentially applicable in a variety of situations, interesting usages, can make porting easy
+  Issues: Messes depending on which frameworks are used, can damage Web page infrastructure
