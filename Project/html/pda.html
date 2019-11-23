@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Automaton Visualization Tool</title>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="../css/common.css"></link>
+	<link rel="stylesheet" type="text/css" href="../css/pda.css"></link>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div class="page-header">
+	</div>
+	<script>
+		$(function(){
+		  $(".page-header").load("../commonHTML/header.html");
+		});
+	</script>
+	<nav class="navigation-main">
+	</nav>
+	<script>
+		$(function(){
+		  $(".navigation-main").load("../commonHTML/nav.html");
+		});
+	</script>
+	<div class="page-title-container">
+		<h2 class="page-title">
+			Page Title
+		</h2>
+	</div>
+	<div class="content-container">
+		<div class="links-nav">
+			<div><a href="https://www.cs.scranton.edu/">Department of Computing Sciences</a></div>
+			<div><a href="https://www.scranton.edu/">University of Scranton</a></div>
+			<div><a href=>Random Page</a></div>
+		</div>
+		<div class="page-content">
+			<div id="svg-cover">
+			</div>
+			<button onclick="addState()">Add State</button>
+			<button onclick="deleteState()">Delete State</button>
+			<button onclick="renameState()">Rename</button>
+			<button onclick="selectStartState()">Set Start State</button>
+			<button onclick="toggleAcceptingState()">Toggle Accepting</button>
+			<button onclick="addTransition()">Add Transition</button>
+			<button onclick="deleteTransition()">Delete Transition</button>
+			<button>Load Automaton</button>
+			<button>Save Automaton</button>
+			<button onclick="loadString()">Load String</button>
+			<button onclick="acceptString()">Test String</button>
+			<button onclick="backtrack()"><--</button>
+			<button onclick="advance()">--></button>
+		</div>
+	</div>
+	<footer>
+		<div>Property of Daniel Tartaglione</div>
+	</footer>
+</body>
+
+<script src="../js/svg.js"></script>
+<script src="../js/svg.draggable.js"></script>
+<script src="../js/svg.draggy.js"></script>
+<script src="../js/svg.connectable.js"></script>
+<script src="../js/pda.js">
+</script>
+
+</html>
