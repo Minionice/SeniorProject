@@ -1,0 +1,208 @@
+package DAO;
+
+import java.util.ArrayList;
+
+public class ContractUnitOfWork {
+	private ArrayList<Contract> newContracts;
+	private ArrayList<Contract> dirtyContracts;
+	private ArrayList<Contract> removedContracts;
+	
+	public void registerNew(Contract contract) {
+		newContracts.add(contract);
+	}
+	
+	public void registerDirty(Contract contract) {
+		dirtyContracts.add(contract);
+	}
+	
+	public void registerRemoved(Contract contract) {
+		removedContracts.add(contract);
+	}
+	
+	public void registerClean(Contract contract) throws Exception {
+		if(ContractIdentityMap.isInMap(contract.getId())==null) {
+			ContractIdentityMap.add(contract);
+		}
+	}
+	
+	public void insertNew() {
+		for(Contract c : newContracts) {
+			//Insertion using the data mapper
+		}
+	}
+	
+	public void updateDirty() {
+		for(Contract c : dirtyContracts) {
+			//Update using the data mapper
+		}
+	}
+	
+	public void deleteRemoved() {
+		for(Contract c : removedContracts) {
+			//Delete using the data mapper
+		}
+	}
+	
+	public void commit() {
+		insertNew();
+		updateDirty();
+		deleteRemoved();
+	}
+}
+
+
+package DAO;
+
+import java.util.ArrayList;
+
+public class CustomerUnitOfWork {
+	private ArrayList<Customer> newCustomers;
+	private ArrayList<Customer> dirtyCustomers;
+	private ArrayList<Customer> removedCustomers;
+	
+	public void registerNew(Customer customer) {
+		newCustomers.add(customer);
+	}
+	
+	public void registerDirty(Customer customer) {
+		dirtyCustomers.add(customer);
+	}
+	
+	public void registerRemoved(Customer customer) {
+		removedCustomers.add(customer);
+	}
+	
+	public void registerClean(Customer customer) throws Exception {
+		if(CustomerIdentityMap.isInMap(customer.getId())==null) {
+			CustomerIdentityMap.add(customer);
+		}
+	}
+	
+	public void insertNew() {
+		for(Customer c : newCustomers) {
+			//Insertion using the data mapper
+		}
+	}
+	
+	public void updateDirty() {
+		for(Customer c : dirtyCustomers) {
+			//Update using the data mapper
+		}
+	}
+	
+	public void deleteRemoved() {
+		for(Customer c : removedCustomers) {
+			//Delete using the data mapper
+		}
+	}
+	
+	public void commit() {
+		insertNew();
+		updateDirty();
+		deleteRemoved();
+	}
+}
+
+package DAO;
+
+import java.util.ArrayList;
+
+public class ProductUnitOfWork {
+	private ArrayList<Product> newProducts;
+	private ArrayList<Product> dirtyProducts;
+	private ArrayList<Product> removedProducts;
+	
+	public void registerNew(Product product) {
+		newProducts.add(product);
+	}
+	
+	public void registerDirty(Product product) {
+		dirtyProducts.add(product);
+	}
+	
+	public void registerRemoved(Product product) {
+		removedProducts.add(product);
+	}
+	
+	public void registerClean(Product product) throws Exception {
+		if(ProductIdentityMap.isInMap(product.getName())==null) {
+			ProductIdentityMap.add(product);
+		}
+	}
+	
+	public void insertNew() {
+		for(Product p : newProducts) {
+			//Insertion using the data mapper
+		}
+	}
+	
+	public void updateDirty() {
+		for(Product p : dirtyProducts) {
+			//Update using the data mapper
+		}
+	}
+	
+	public void deleteRemoved() {
+		for(Product p : removedProducts) {
+			//Delete using the data mapper
+		}
+	}
+	
+	public void commit() {
+		insertNew();
+		updateDirty();
+		deleteRemoved();
+	}
+}
+
+package DAO;
+
+import java.util.ArrayList;
+
+public class RevenueRecognitionUnitOfWork {
+	private ArrayList<RevenueRecognition> newRevenueRecognitions;
+	private ArrayList<RevenueRecognition> dirtyRevenueRecognitions;
+	private ArrayList<RevenueRecognition> removedRevenueRecognitions;
+	
+	public void registerNew(RevenueRecognition revenueRecognition) {
+		newRevenueRecognitions.add(revenueRecognition);
+	}
+	
+	public void registerDirty(RevenueRecognition revenueRecognition) {
+		dirtyRevenueRecognitions.add(revenueRecognition);
+	}
+	
+	public void registerRemoved(RevenueRecognition revenueRecognition) {
+		removedRevenueRecognitions.add(revenueRecognition);
+	}
+	
+	public void registerClean(RevenueRecognition revenueRecognition) throws Exception {
+		if(RevenueRecognitionIdentityMap.isInMap(revenueRecognition.getId())==null) {
+			RevenueRecognitionIdentityMap.add(revenueRecognition);
+		}
+	}
+	
+	public void insertNew() {
+		for(RevenueRecognition r : newRevenueRecognitions) {
+			//Insertion using the data mapper
+		}
+	}
+	
+	public void updateDirty() {
+		for(RevenueRecognition r : dirtyRevenueRecognitions) {
+			//Update using the data mapper
+		}
+	}
+	
+	public void deleteRemoved() {
+		for(RevenueRecognition r : removedRevenueRecognitions) {
+			//Delete using the data mapper
+		}
+	}
+	
+	public void commit() {
+		insertNew();
+		updateDirty();
+		deleteRemoved();
+	}
+}
